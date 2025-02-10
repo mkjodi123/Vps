@@ -9,12 +9,12 @@ attack_in_progress = False
 current_attack = None  # Store details of the current attack
 attack_history = []  # Store attack logs
 
-TELEGRAM_BOT_TOKEN = '7591376778:AAEv7GkSu2J97JPrx02GXbnS_UGYSL57f7I'
+TELEGRAM_BOT_TOKEN = '7591376778:AAFxaoD6j9s_7iejKBGm7lbwH-XQlsZd1_E'
 ADMIN_USER_ID = 7353797869
 MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net/"
 DB_NAME = "Roxz"
 COLLECTION_NAME = "users"
-ATTACK_TIME_LIMIT = 120  # Maximum attack duration in seconds
+ATTACK_TIME_LIMIT = 200  # Maximum attack duration in seconds
 COINS_REQUIRED_PER_ATTACK = 5  # Coins required for an attack
 
 # MongoDB setup
