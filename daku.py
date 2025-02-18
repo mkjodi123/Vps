@@ -9,10 +9,10 @@ attack_in_progress = False
 current_attack = None  # Store details of the current attack
 attack_history = []  # Store attack logs
 
-TELEGRAM_BOT_TOKEN = '7312786315:AAELW0m9U3N3XQCUFxrMEHcnT0_tmIyv9O4'
+TELEGRAM_BOT_TOKEN = '8034991854:AAFZvlaurx4seAcgKaelO7F8rlXvnSMEQhQ'
 ADMIN_USER_ID = 7353797869
 MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net/"
-DB_NAME = "Roxz"
+DB_NAME = "MONSTER"
 COLLECTION_NAME = "users"
 ATTACK_TIME_LIMIT = 240  # Maximum attack duration in seconds
 COINS_REQUIRED_PER_ATTACK = 5  # Coins required for an attack
@@ -53,7 +53,7 @@ async def start(update: Update, context: CallbackContext):
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
-async def Roxz(update: Update, context: CallbackContext):
+async def mon(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     args = context.args
 
@@ -62,7 +62,7 @@ async def Roxz(update: Update, context: CallbackContext):
         return
 
     if len(args) != 3:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Tere ko simple command bhi nahi aati? Chal, sikh le: /Roxz <add|rem> <user_id> <coins>*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Tere ko simple command bhi nahi aati? Chal, sikh le: /mon <add|rem> <user_id> <coins>*", parse_mode='Markdown')
         return
 
     command, target_user_id, coins = args
@@ -294,7 +294,7 @@ async def users(update: Update, context: CallbackContext):
 def main():
     application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("Roxz", Roxz))
+    application.add_handler(CommandHandler("mon", mon))
     application.add_handler(CommandHandler("attack", attack))
     application.add_handler(CommandHandler("myinfo", myinfo))
     application.add_handler(CommandHandler("help", help))
