@@ -11,8 +11,8 @@ attack_history = []  # Store attack logs
 
 TELEGRAM_BOT_TOKEN = '8034991854:AAFZvlaurx4seAcgKaelO7F8rlXvnSMEQhQ'
 ADMIN_USER_ID = 7353797869
-MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.ne"
-DB_NAME = "Roxz"
+MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net/"
+DB_NAME = "Roz"
 COLLECTION_NAME = "users"
 ATTACK_TIME_LIMIT = 240  # Maximum attack duration in seconds
 COINS_REQUIRED_PER_ATTACK = 5  # Coins required for an attack
@@ -40,7 +40,7 @@ async def update_user(user_id, coins):
 async def start(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     message = (
-        "*❄️ WELCOME TO MONSTER 😈 DDOS BOT ❄️*\n\n"
+        "*❄️ WELCOME TO MONSTER  😈 DDOS BOT ❄️*\n\n"
         "*🔥 Yeh bot apko deta hai hacking ke maidan mein asli mazza! 🔥*\n\n"
         "*✨ Key Features: ✨*\n"
         "🚀 *𝘼𝙩𝙩𝙖𝙘𝙠 𝙠𝙖𝙧𝙤 𝙖𝙥𝙣𝙚 𝙤𝙥𝙥𝙤𝙣𝙚𝙣𝙩𝙨 𝙥𝙖𝙧 𝘽𝙜𝙢𝙞 𝙈𝙚 /attack*\n"
